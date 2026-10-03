@@ -1,0 +1,115 @@
+/* ==========================================================================
+   ellura v3 — design tokens  ("clinic editorial": quiet, warm, science-led)
+
+   Colour is derived from the supplied assets:
+   - plum   #5A2E58  sampled from the ellura logo
+   - lilac  #D0A6D8  the curved band on the carton and bottle label
+   - paper  #FBF7F3  the studio background of the official pack shots, so
+                     product photography sits on the page without a box
+   Everything else is a tint or shade of those three, plus one warm neutral
+   (sand) for rhythm. No accent hues are introduced.
+   ========================================================================== */
+:root {
+  /* Plum family (logo) */
+  --plum-950: #1f0d1f;
+  --plum-900: #2b1429;
+  --plum-800: #3e1f3c;
+  --plum: #5a2e58;
+  --plum-600: #774474;
+  --plum-400: #a27a9f;
+  --plum-300: #c3a5c0;
+
+  /* Lilac family (carton) */
+  --lilac: #d0a6d8;
+  --lilac-300: #dfc3e5;
+  --lilac-200: #ebd8ef;
+  --lilac-100: #f3e8f5;
+  --lilac-50: #f8f1f9;
+
+  /* Warm neutrals */
+  --paper: #fbf7f3;
+  --paper-2: #f5eee7;
+  --sand: #ece3d9;
+  --sand-2: #ddd0c3;
+  --white: #fff;
+
+  /* Ink */
+  --ink: #2b1429;
+  --ink-2: #5b4658;
+  --ink-3: #85727f;
+
+  /* Semantic */
+  --bg: var(--paper);
+  --fg: var(--ink);
+  --muted: var(--ink-2);
+  --line: rgba(43, 20, 41, 0.13);
+  --line-strong: rgba(43, 20, 41, 0.38);
+  --focus: #7b3cc8;
+  --success: #3d6b4f;
+  --danger: #b0283c;
+
+  /* Type
+     Display: Newsreader — a light, high-contrast editorial serif.
+     Interface & body: Hanken Grotesk — neutral, humanist, very legible. */
+  --font-display: 'Newsreader Variable', 'Iowan Old Style', Georgia, serif;
+  --font-sans: 'Hanken Grotesk Variable', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  --t-hero: clamp(3rem, 1.4rem + 6.4vw, 7.6rem);
+  --t-d1: clamp(2.5rem, 1.4rem + 4.6vw, 5.8rem);
+  --t-d2: clamp(2.1rem, 1.3rem + 3.2vw, 4.3rem);
+  --t-d3: clamp(1.6rem, 1.2rem + 1.7vw, 2.6rem);
+  --t-h4: clamp(1.2rem, 1.08rem + 0.55vw, 1.5rem);
+  --t-lead: clamp(1.05rem, 0.98rem + 0.35vw, 1.25rem);
+  --t-body: 1rem;
+  --t-sm: 0.9rem;
+  --t-xs: 0.78rem;
+
+  /* Space */
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 24px;
+  --s-6: 32px;
+  --s-7: 48px;
+  --s-8: 64px;
+  --s-9: 96px;
+  --section: clamp(72px, 9vw, 148px);
+  --gutter: clamp(18px, 3.2vw, 48px);
+  --max: 1480px;
+  --max-text: 64ch;
+
+  /* Shape — restrained: soft cards, pill controls, nothing bubbly */
+  --r-xs: 6px;
+  --r-sm: 10px;
+  --r-md: 14px;
+  --r-lg: 22px;
+  --r-xl: 32px;
+  --r-pill: 999px;
+
+  --shadow-1: 0 1px 2px rgba(43, 20, 41, 0.05), 0 8px 24px -8px rgba(43, 20, 41, 0.1);
+  --shadow-2: 0 2px 6px rgba(43, 20, 41, 0.06), 0 30px 60px -24px rgba(43, 20, 41, 0.3);
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-io: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-1: 160ms;
+  --dur-2: 280ms;
+  --dur-3: 560ms;
+
+  /* Layers */
+  --z-sticky: 40;
+  --z-header: 60;
+  --z-drawer: 80;
+  --z-overlay: 90;
+
+  --announce-h: 38px;
+  --header-h: 72px;
+}
+
+@media (max-width: 900px) {
+  :root {
+    --announce-h: 34px;
+    --header-h: 60px;
+  }
+}
